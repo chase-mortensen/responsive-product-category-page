@@ -5,7 +5,7 @@
   <Hero />
   <Products />
   <SizeGuide />
-  <MattressTypes />
+  <MattressTypes style="background-color:#00B3E2" />
   <Tips />
 </template>
 

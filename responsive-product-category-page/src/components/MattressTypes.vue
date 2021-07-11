@@ -1,24 +1,24 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div style="background-color:#00B3E2">
-    <div class="max-w-7xl">
-      <div class="lg:text-center">
+  <div class="max-w-7xl w-max">
+    <!-- <div class="max-w-7xl w-full"> -->
+      <div class="lg:text-center w-screen grid grid-cols-1 items-center" style="background-color:#00B3E2">
         <!-- <h2 class="text-base text-white font-semibold tracking-wide uppercase">Transactions</h2> -->
-        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+        <p class="mt-2 pt-10 text-3xl font-extrabold tracking-tight text-white sm:text-4xl w-screen">
           Whats Your Type
         </p>
+        <img class="relative sm:w-1/4 md:w-40 justify-self-center pt-10" src="./../assets/white-line.svg"/>
         <!-- <p class="mt-4 max-w-2xl text-xl text-white lg:mx-auto">
           Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
         </p> -->
       </div>
-
-      <div class="mt-10">
-        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-4 justify-between">
+      <div class="py-10 w-screen flex" style="background-color:#00B3E2">
+        <!-- <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-4">
           <div v-for="feature in features" :key="feature.name" class="relative">
             <dt>
-              <div class="flex items-center justify-center rounded-md bg-transparent text-white my-8">
+              <div class="flex items-center justify-center rounded-md bg-transparent text-white my-8"> -->
                 <!-- <component :is="feature.icon" class="h-6 w-6" aria-hidden="true" /> -->
-                <img class="object-cover" :src="feature.src" alt="" />
+                <!-- <img class="object-cover" :src="feature.src" />
               </div>
             </dt>
             <dd>
@@ -28,9 +28,42 @@
               {{ feature.description }}
             </dd>
           </div>
-        </dl>
+        </dl> -->
+        <div class="space-y-10 md:space-y-0 grid lg:grid-cols-4 sm:grid-cols-1 flex justify-between w-full">
+          <div v-for="feature in features" :key="feature.name" class="relative px-10 lg:hidden">
+            <div>
+              <div>
+                <div class="flex justify-center rounded-md bg-transparent text-white my-8">
+                  <!-- <component :is="feature.icon" class="h-6 w-6" aria-hidden="true" /> -->
+                  <img class="object-cover" :src="feature.src" />
+                </div>
+              </div>
+              <div>
+                <p class="text-lg leading-6 font-medium text-white">{{ feature.name }}</p>
+              </div>
+              <div class="mt-2 text-base text-white text-center sm:mx-auto sm:w-1/2 lg:w-full">
+                {{ feature.description }}
+              </div>
+            </div>
+          </div>
+          <div v-for="feature in features" :key="feature.name" class="relative px-10 hidden lg:contents">
+            <div class="flex justify-center rounded-md bg-transparent text-white my-8">
+              <img class="object-cover" :src="feature.src" />
+            </div>
+          </div>
+          <div v-for="feature in features" :key="feature.name" class="relative px-10 hidden lg:contents">
+            <div class="rounded-md bg-transparent text-white my-8">
+              <div>
+                <p class="text-lg leading-6 font-medium text-white">{{ feature.name }}</p>
+              </div>
+              <div class="mt-2 text-base text-white text-center sm:mx-auto sm:w-2/3 lg:w-3/4">
+                {{ feature.description }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
