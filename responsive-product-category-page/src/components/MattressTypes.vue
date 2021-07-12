@@ -29,7 +29,7 @@
             </dd>
           </div>
         </dl> -->
-        <div class="space-y-10 md:space-y-0 grid lg:grid-cols-4 sm:grid-cols-1 flex justify-between w-full">
+        <div class="space-y-10 md:space-y-0 grid lg:grid-cols-4 sm:grid-cols-1 flex justify-evenly w-full">
           <div v-for="feature in features" :key="feature.name" class="relative px-10 lg:hidden">
             <div>
               <div>
