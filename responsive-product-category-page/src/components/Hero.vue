@@ -1,8 +1,8 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="relative bg-white">
+  <div class="relative bg-transparent">
     <div class="max-w-7xl lg:w-1/3 mr-auto bg-transparent">
-      <div class="z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+      <div class="z-10 pb-8 bg-transparent sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
         <!-- <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           <polygon points="50,0 100,0 50,100 0,100" />
         </svg> -->
@@ -15,10 +15,10 @@
                   <a href="#">
                     <span class="sr-only">Workflow</span>
                     <!-- <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" /> -->
-                    <img class="h-8 w-auto sm:h-10" src="./../assets/linenspa-logo.svg" />
+                    <img class="h-8 w-auto sm:h-10 px-10" src="./../assets/linenspa-logo.svg" />
                   </a>
                   <div class="-mr-2 flex items-center md:hidden">
-                    <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <PopoverButton class="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                       <span class="sr-only">Open main menu</span>
                       <MenuIcon class="h-6 w-6" aria-hidden="true" />
                     </PopoverButton>
@@ -57,19 +57,25 @@
           </transition> -->
         </Popover>
 
-        <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-          <div class="sm:text-center lg:text-left">
-            <h1 class="text-4xl tracking-tight font-medium text-gray-900 sm:text-5xl md:text-6xl">
-              <span class="block">Good Things</span>
-              <span class="block">Come in Tall But</span>
-              <span class="block">Manageable</span>
-              <span class="block">Packages</span>
-              {{ ' ' }}
-              <!-- <span class="block text-indigo-600 xl:inline">online business</span> -->
-            </h1>
-            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-              Linenspa mattresses feature a wide variety of feels and fibers. Firm to plush, memory foam to encased coils—it’s all here. Oh, and did we mention not a single bed is priced over $600? That’s right.
-            </p>
+        <main class="mt-10 mx-auto max-w-7xl pr-4 sm:mt-12 sm:pr-6 md:mt-16 lg:mt-20 lg:pr-8 xl:mt-28 bg-transparent">
+          <div class="sm:text-center lg:text-left flex bg-transparent">
+            <div class="ml-0 pl-0 lg:inset-0 left-0 flex-none justify-start pr-2">
+              <img class="h-12 w-12 lg:h-20 lg:w-20 object-cover" src="./../assets/small-blue-rect.svg" alt="" />
+            </div>
+            <div class="flex-auto">
+              <h1 class="text-4xl tracking-tight font-medium text-gray-900 sm:text-5xl md:text-6xl">
+                <span class="block">Good Things</span>
+                <span class="block">Come in Tall But</span>
+                <span class="block">Manageable</span>
+                <span class="block">Packages</span>
+                {{ ' ' }}
+                <!-- <span class="block text-indigo-600 xl:inline">online business</span> -->
+              </h1>
+              <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0 w-2/3">
+                Linenspa mattresses feature a wide variety of feels and fibers. Firm to plush, memory foam to encased coils—it’s all here. Oh, and did we mention not a single bed is priced over $600? That’s right.
+              </p>
+            </div>
+            
             <!-- <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div class="rounded-md shadow">
                 <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
@@ -86,11 +92,18 @@
         </main>
       </div>
     </div>
-    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-2/5 lg:h-full shadow-2xl my-100" />
-    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <!-- <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="" /> -->
-      <img class="h-56 w-full object-cover sm:h-full lg:h-full" src="./../assets/header-image.svg" alt="" />
+    <!-- <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-2/5 lg:h-full shadow-2xl my-100" /> -->
+    
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-2/3 h-full flex justify-end">
+      <img class="h-12 w-96 xl:w-3/4 object-cover" src="./../assets/blue-rectangle.svg" alt="" />
     </div>
+    <div class="absolute lg:inset-y-12 lg:right-0 lg:w-full h-full flex justify-end">
+      <div class="w-1/2 h-full shadow-2xl"></div>
+    </div>
+    <div class="lg:absolute lg:inset-y-12 lg:right-0 h-full flex justify-end">
+      <img class="w-full object-cover" src="./../assets/header.svg" alt="" />
+    </div>
+    
   </div>
   <!-- <img src="./../assets/product-1.svg" alt="" /> -->
 
